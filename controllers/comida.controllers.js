@@ -116,7 +116,6 @@ const upgradeFood = async (req = request, res = response) =>{
 
         const updatedFood = await Comida.findByIdAndUpdate(idFood, newChanges,{ new: true })
 
-        console.log('llego')
 
         return res.status(200).json({
             ok:true,
