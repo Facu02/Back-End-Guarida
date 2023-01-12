@@ -1,13 +1,15 @@
 // Ruta /api/comida
 
 const { Router } = require("express");
-const { addFood } = require("../controllers/comida.controllers");
+const { addFood, callFood, deleteFood, upgradeFood } = require("../controllers/comida.controllers");
 
 const {check} = require('express-validator');
 const { validarCampos } = require("../middlewares/validarCampos");
 
 
 const router = Router();
+
+router.get('/', callFood )
 
 router.post('/' ,
     check('name','El nombre es obligatorio').not().isEmpty(),
@@ -16,6 +18,10 @@ router.post('/' ,
     validarCampos
     ,addFood
 )
+
+router.delete('/:id',deleteFood)
+
+router.put('/:id',upgradeFood)
 
 
 
