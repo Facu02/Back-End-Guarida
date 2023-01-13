@@ -7,9 +7,16 @@ const MesasSchema = Schema({
         type    :Number,
         require :true
     },
+    password:{
+        type:String
+    },
     orders:{
         type: Schema.Types.ObjectId,
         ref: 'orders'
+    },
+    available:{
+        type:Boolean,
+        default:false
     }
 
 })

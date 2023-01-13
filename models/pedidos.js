@@ -1,12 +1,12 @@
 const { Schema, model } = require('mongoose')
 
 const PedidosSchema = Schema({
-    comida:{
-        type: Schema.Types.ObjectId,
+    food:{
+        type: [Schema.Types.ObjectId],
         ref: 'food'
     },
-    bebidas:{
-        type: Schema.Types.ObjectId,
+    drinks:{
+        type: [Schema.Types.ObjectId],
         ref: 'drinks'
     },
 })

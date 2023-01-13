@@ -59,7 +59,8 @@ class Server {
 
     router(){
         app.use('/api/comida', require('../routes/comida.routes')) //TODO : faltan las imagenes 
-        app.use('/api/bebidas', require('../routes/bebidas.routes'))
+        app.use('/api/bebidas', require('../routes/bebidas.routes')) // TODO : faltan las imagenes
+        app.use('/api/pedidos', require('../routes/pedidos.routes')) 
     }
 
     
