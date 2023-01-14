@@ -17,9 +17,9 @@ const validarCampos = (req, res = response, next) =>{
 
 const FoodOrDrink= (req, res = response, next) =>{
     const errores =   validationResult ( req );
+     console.log(errores.errors.length)
 
-
-    if(errores.errors.length >=2){
+    if(errores.errors.length >2){
         return res.status(400).json({
             ok:false,
             errors : errores.mapped()
