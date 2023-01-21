@@ -9,6 +9,7 @@ const PedidosSchema = Schema({
         type: [Schema.Types.ObjectId],
         ref: 'drinks'
     },
+
 })
 
 PedidosSchema.method('toJSON', function() {

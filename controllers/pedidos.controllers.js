@@ -122,7 +122,7 @@ const catchError = (error, res) =>{
     console.log(error)
     return res.status(404).json({
         ok:false,
-        msg:'Error grabe en la base comunicar al admin'
+        msg:'Error grave en la base comunicar al admin'
     }) 
 }
 
